@@ -21,3 +21,6 @@ class TestValidator(TestCase):
     def test_heslo_jen_cisla(self):
         self.assertTrue(self.validator.validuj_heslo("123456"), "Heslo '123456' je platné.")
 
+    def test_heslo_jen_pismena(self):
+        self.assertFalse(self.validator.validuj_heslo("abcdef"), "Heslo 'abcdef' neobsahuje číslo.")
+
